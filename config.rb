@@ -53,6 +53,10 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+# This is needed for Github pages, since they're hosted on a subdomain
+activate :relative_assets
+set :relative_links, true
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -70,3 +74,9 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  deploy.build_before = true
+end
+

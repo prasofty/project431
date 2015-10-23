@@ -3,22 +3,7 @@ title: Welcome to Project431
 ---
 
 <div class="container">
-  <div class="header clearfix">
-    <nav>
-      <ul class="nav nav-pills pull-right">
-        <li role="presentation"><a>Sign In</a></li>
-        <li role="presentation"><a>Sign Up</a></li>
-      </ul>
-    </nav>
-    <h3 class="text-muted">Project name</h3>
-  </div>
-  <div ui-view class="content-body"></div>
-  <footer class="footer">
-    <ul class="footer-links pull-right">
-      <li role="presentation"><a href="#">Home</a></li>
-      <li role="presentation"><a href="#">About</a></li>
-      <li role="presentation"><a href="#">Contact</a></li>
-    </ul>
-    <span>&copy; Project431 2015</span>
-  </footer>
+  <div ui-view="header"></div>
+  <div ui-view="content_body"></div>
+  <div ui-view="footer"></div>
 </div>

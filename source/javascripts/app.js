@@ -6,15 +6,37 @@ Parse.initialize("gluKproWCh1eTnFbhiFtjzNhuOzOZMAZBMXlk7Ci", "VnMpNi4Ei58fuFTkjd
 angular
     .module('project431', ['ui.router'])
     .config(function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.when('/dashboard', '/dashboard/overview');
+
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-            .state('intro', {
+            .state('root', {
                 url: '',
-                templateUrl: 'views/intro.html'
+                abstract: true,
+                views: {
+                    'header': {
+                        templateUrl: 'views/header.html',
+                        controller: 'headerController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html'
+                    }
+                }
+            })
+            .state('root.home', {
+                url: '/',
+                views: {
+                    'content_body@': {
+                        templateUrl: 'views/intro.html'
+                    }
+                }
+            })
+            .state('root.dashboard', {
+                url: '/dashboard',
+                views: {
+                    'container@': {
+                        templateUrl: 'views/dashboard.html'
+                    }
+                }
             });
     });
-
-
-

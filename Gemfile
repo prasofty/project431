@@ -7,6 +7,7 @@ gem "middleman", "~>3.4.0"
 # Plugin for middleman to generate Github pages
 gem 'middleman-gh-pages'
 gem 'middleman-deploy', '~> 1.0'
+gem 'middleman-sprockets'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

@@ -3,8 +3,8 @@
 /* Initialize Parse */
 Parse.initialize("gluKproWCh1eTnFbhiFtjzNhuOzOZMAZBMXlk7Ci", "VnMpNi4Ei58fuFTkjdxk5jyCpuBpIbLNEaHuUVh8");
 
-angular
-    .module('project431', ['ui.router'])
+window.multiShipApp = angular
+    .module('project431', ['ui.router', 'ui.bootstrap'])
     .config(function($stateProvider, $urlRouterProvider){
 
         $urlRouterProvider.otherwise('/');
